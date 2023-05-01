@@ -1,11 +1,12 @@
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
-// import * as SplashScreen from "expo-splash-screen";
+import { useCallback } from "react";
 
-// SplashScreen.preventAutoHideAsync();
+import * as SplashScreen from "expo-splash-screen";
+
+SplashScreen.preventAutoHideAsync;
 
 export const unstable_settings = {
-  // Ensure any route can link back to `/`
   initialRouteName: "home",
 };
 
@@ -16,6 +17,13 @@ const Layout = () => {
     DMRegular: require("../assets/fonts/DMSans-Regular.ttf"),
   });
 
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+    [fontsLoaded]
+  });
+
   if (!fontsLoaded) {
     return null;
   }
@@ -24,7 +32,7 @@ const Layout = () => {
     <Stack initialRouteName="home">
       <Stack.Screen name="home" />
     </Stack>
-  )
+  );
 };
 
 export default Layout;
