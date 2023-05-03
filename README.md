@@ -16,4 +16,3 @@ Whether you're just starting your job search or looking to switch careers, this 
 ![JobDetail2](https://user-images.githubusercontent.com/108659552/235919536-62cc49a4-949e-4b59-ae19-806c264b38ec.jpg)
 
 
-exp://exp.host/@blackmokujingal/jobsift?release-channel=default
